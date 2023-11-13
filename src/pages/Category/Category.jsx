@@ -1,19 +1,19 @@
-import { useMatches } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 
 export const Category = () => {
 
-  // const matches = useMatches();
-  // console.log(matches);
+  const url = useLocation();
+
   return (
   <>
     <h1>Category</h1>
     
-    <a href="/">Назад</a>
+    <Link to={url.pathname}>Назад</Link>
     <ul>
-      <li><a href="./cat/notebook">Ноутбуки</a></li>
-      <li><a href="./cat/monitor">Мониторы</a></li>
-      <li><a href="./cat/cellphone">Мобильные телефоны</a></li>
+      <li><Link to={`${url.pathname}/notebook`}>Ноутбуки</Link></li>
+      <li><Link to={`${url.pathname}/monitor`}>Мониторы</Link></li>
+      <li><Link to={`${url.pathname}/cellphone`}>Мобильные телефоны</Link></li>
     </ul>
   </>
   )

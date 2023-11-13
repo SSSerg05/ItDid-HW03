@@ -12,15 +12,17 @@ const ErrorPage = lazy(() => import('../pages/Error/Error'));
 export const App = () => {
   return (
     <>
-      <Routes>
-        <Route path="/" element={ <Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/cat" element={<CategoryPage />} />
-          <Route path="/cat:categoryName" element={CategoryDescription} />
-          <Route element={<ErrorPage />} />
-        </Route>
-      </Routes>
+      {/* <Router> */}
+        <Routes>
+          <Route path="/" element={ <Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/cat" element={<CategoryPage />} />
+            <Route path="/cat:categoryName" element={CategoryDescription} />
+            <Route path="*" element={<ErrorPage />} />
+          </Route>
+        </Routes>
+      {/* </Router> */}
     </>
   );
 };
