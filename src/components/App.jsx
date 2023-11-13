@@ -16,8 +16,8 @@ export const App = () => {
         <Route path="/" element={ <Layout />}>
           <Route index element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/cat" element={<CategoryPage />} />
-          <Route path="/cat/:categoryName" element={<CategoryDescription />} />
+          <Route path="/category" element={<CategoryPage />} />
+          <Route path="/category/:categoryName" element={<CategoryDescription />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>

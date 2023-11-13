@@ -8,7 +8,7 @@ export const CategoryDescription = () => {
 
   return (
   <div>
-    <Link to={'/cat'}>Назад</Link>
+    <Link to={'/category'}>Назад</Link>
     <h1>Category: {categoryName}</h1>
   </div>
   )
