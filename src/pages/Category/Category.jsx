@@ -7,6 +7,8 @@ export const Category = () => {
   // console.log(matches);
   return (
   <>
+    <h1>Category</h1>
+    
     <a href="/">Назад</a>
     <ul>
       <li><a href="./cat/notebook">Ноутбуки</a></li>
