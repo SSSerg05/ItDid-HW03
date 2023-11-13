@@ -5,11 +5,11 @@ import Header from './Header/Header';
 import Footer from './Footer/Footer';
 
 
-export const Layout = () => {
+export const Layout = ({navigation}) => {
 
   return (
     <>
-      <Header />
+      <Header nav={navigation}/>
       <main>
         <Suspense fallback={
           <div>Loading...</div>

@@ -1,15 +1,19 @@
 import { NavLink } from "react-router-dom";
 
 
-export const Header = () => {
+export const Header = ({nav}) => {
 
   return (
     <header>
       <nav>
         <ul>
-          <li><NavLink to="/">Главная</NavLink></li>
-          <li><NavLink to="/about">О сайте</NavLink></li>
-          <li><NavLink to="/category">Категории</NavLink></li>
+          {
+            nav.map(item => (
+              <li key={item.url}>
+                <NavLink to={item.url}>{item.text}</NavLink>
+              </li>
+            ))
+          }
         </ul>
       </nav>
     </header>

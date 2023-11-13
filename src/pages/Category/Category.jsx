@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 
 
-export const Category = () => {
+export const Category = ({cat}) => {
 
   const url = useLocation();
 
@@ -10,9 +10,13 @@ export const Category = () => {
     <h1>Category</h1>
     
     <ul>
-      <li><Link to={`${url.pathname}/notebook`}>Ноутбуки</Link></li>
-      <li><Link to={`${url.pathname}/monitor`}>Мониторы</Link></li>
-      <li><Link to={`${url.pathname}/cellphone`}>Мобильные телефоны</Link></li>
+      {
+        cat.map(item => (
+          <li key={url}>
+            <Link to={`${url.pathname}/${item.url}`}>{item.text}</Link>
+          </li>
+        ))
+      }
     </ul>
   </>
   )
