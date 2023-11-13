@@ -1,21 +1,24 @@
-import { Router, Route } from "react-router-dom";
+import { lazy } from "react";
+import { Routes, Route } from "react-router-dom";
 
-import Header from "./Header/Header";
-import Home from "./Home/Home";
-import About from "./About/About";
-import Category from "./Category/Category";
-import Error from "./Error/Error";
+import { Layout } from "./Layout";
+
+const HomePage = lazy(() => import('../pages/Home/Home'));
+const AboutPage = lazy(() => import('../pages/About/About'));
+const CategoryPage = lazy(() => import('../pages/Category/Category'));
+const ErrorPage = lazy(() => import('../pages/Error/Error'));
 
 export const App = () => {
   return (
     <>
-      <Header />
-      <Router>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/category" component={Category} />
-        <Route component={Error} />
-      </Router>
+      <Routes>
+        <Route path="/" element={ <Layout />}>
+          <Route index element={HomePage} />
+          <Route path="/about" element={AboutPage} />
+          <Route path="/category" element={CategoryPage} />
+          <Route element={ErrorPage} />
+        </Route>
+      </Routes>
     </>
   );
 };
