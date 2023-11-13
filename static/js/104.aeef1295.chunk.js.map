@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/104.aeef1295.chunk.js","mappings":"oKAEaA,EAAQ,WAEnB,OACA,+BACE,mCAGH,EAED,W","sources":["pages/About/About.jsx"],"sourcesContent":["\n\nexport const About = () => {\n\n  return (\n  <>\n    <h1>About</h1>\n  </>\n  )\n}\n\nexport default About;"],"names":["About"],"sourceRoot":""}

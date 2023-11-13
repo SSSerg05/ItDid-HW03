@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkitgid_hw03=self.webpackChunkitgid_hw03||[]).push([[894],{894:function(r,n,e){e.r(n),e.d(n,{Error:function(){return i}});var t=e(184),i=function(){return(0,t.jsx)(t.Fragment,{children:(0,t.jsx)("h1",{children:"Error 404"})})};n.default=i}}]);
+//# sourceMappingURL=894.821c43ed.chunk.js.map
