@@ -9,7 +9,6 @@ export const Category = () => {
   <>
     <h1>Category</h1>
     
-    <Link to={url.pathname}>Назад</Link>
     <ul>
       <li><Link to={`${url.pathname}/notebook`}>Ноутбуки</Link></li>
       <li><Link to={`${url.pathname}/monitor`}>Мониторы</Link></li>

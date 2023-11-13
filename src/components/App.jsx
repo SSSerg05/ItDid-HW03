@@ -1,5 +1,5 @@
 import { lazy } from "react";
-import { Routes, Route, Router } from "react-router-dom";
+import { Routes, Route, } from "react-router-dom";
 
 import Layout from "./Layout";
 import CategoryDescription from "./CategoryDescription/CategoryDescription";
@@ -12,17 +12,15 @@ const ErrorPage = lazy(() => import('../pages/Error/Error'));
 export const App = () => {
   return (
     <>
-      {/* <Router> */}
-        <Routes>
-          <Route path="/" element={ <Layout />}>
-            <Route index element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/cat" element={<CategoryPage />} />
-            <Route path="/cat:categoryName" element={CategoryDescription} />
-            <Route path="*" element={<ErrorPage />} />
-          </Route>
-        </Routes>
-      {/* </Router> */}
+      <Routes>
+        <Route path="/" element={ <Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/cat" element={<CategoryPage />} />
+          <Route path="/cat/:categoryName" element={<CategoryDescription />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Route>
+      </Routes>
     </>
   );
 };

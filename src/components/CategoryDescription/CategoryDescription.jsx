@@ -3,7 +3,9 @@ import { Link, useParams } from "react-router-dom";
 
 export const CategoryDescription = () => {
 
-  const categoryName = useParams();
+  const {categoryName} = useParams();
+
+
   return (
   <div>
     <Link to={'/cat'}>Назад</Link>
