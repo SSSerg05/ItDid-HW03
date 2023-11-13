@@ -7,7 +7,7 @@ import { App } from 'components/App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename='/itgid-hw03'>
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>

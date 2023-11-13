@@ -1,5 +1,3 @@
-import { NavLink } from "react-router-dom";
-
 
 export const Header = ({nav}) => {
 
@@ -10,7 +8,7 @@ export const Header = ({nav}) => {
           {
             nav.map(item => (
               <li key={item.url}>
-                <NavLink to={item.url}>{item.text}</NavLink>
+                <a href={item.url}>{item.text}</a>
               </li>
             ))
           }

@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 
 export const Category = ({cat}) => {
@@ -13,7 +13,7 @@ export const Category = ({cat}) => {
       {
         cat.map(item => (
           <li key={url}>
-            <Link to={`${url.pathname}/${item.url}`}>{item.text}</Link>
+            <a href={`${url.pathname}/${item.url}`}>{item.text}</a>
           </li>
         ))
       }
